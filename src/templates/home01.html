@@ -1,0 +1,22 @@
+{% include 'layout02.html' %}
+
+<div class="container mt-5">
+    <h3>
+        Add input to chat with chatbot
+    </h3>
+    <form action="/" method="POST">
+        <div>
+            <textarea class="form-control" placeholder="Ask here" name="query" rows="3"></textarea>
+            <button class="btn btn-primary mt-1" type="submit">Ask</button>
+        </div>
+    </form>
+    <div>
+        <div class="card text-center mt-3">
+            <div class="card-header">
+                Chat History:
+            </div>
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+</div>

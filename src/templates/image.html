@@ -1,0 +1,28 @@
+{% include 'layout02.html' %}
+
+<div class="container mt-5">
+    <h3>
+        Add input to generate images with a chatbot
+    </h3>
+    <form action="/image" method="POST">
+        <div>
+            <textarea class="form-control" placeholder="Ask here" name="query" rows="3"></textarea>
+            <button class="btn btn-primary mt-1" type="submit">Ask</button>
+            <button class="btn btn-primary mt-1" type="reset">Clear</button>
+        </div>
+    </form>
+    {% if image_url is not none and image_url|length > 10 %}
+    <div>
+        <div class="card text-center mt-3">
+            <div class="card-header">
+                Image Generation
+            </div>
+            <div class="card-body">
+                <div>
+                    <img src="{{image_url}}" alt="Amazing image!">
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+</div>
